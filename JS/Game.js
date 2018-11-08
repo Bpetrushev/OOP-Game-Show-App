@@ -3,7 +3,15 @@ class Game {
 		this.misses = 0;
 		this.phrases = [
 			new Phrase(`hey`),
-			new Phrase(`you win`)
+			new Phrase(`you win`),
+			new Phrase(`put back my english word`),
+			new Phrase(`boyfriends`),
+			new Phrase(`campground`),
+			new Phrase(`importance`),
+			new Phrase(`trampoline`),
+			new Phrase(`blacksmith`),
+			new Phrase(`binoculars`),
+			new Phrase(`background`)
 		];
 	}
 	getRandomPhrase(){																					//chooses a random phrase and sets it as the current phrase

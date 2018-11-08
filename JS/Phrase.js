@@ -4,7 +4,7 @@ class Phrase {
 	}
 	addPhraseToDisplay(){																					//removes the previous phrase and
 		const phraseUl = document.querySelector(`#phrase ul`);												//creates each letter block for display
-		document.querySelectorAll(`.letter`).forEach(letter => phraseUl.removeChild(letter));
+		document.querySelectorAll(`.letter, .space`).forEach(letter => phraseUl.removeChild(letter));
 		for (let i = 0; i < this.phrase.length; i++) {
 			const placeHolder = document.createElement(`li`);
 			placeHolder.className = (this.phrase[i] === ` `)? `hide space`: `hide letter ${this.phrase[i]}`;
@@ -17,7 +17,6 @@ class Phrase {
 	}
 	showMatchedLetter(letter){																				//shows the received in the phrase display
 		const letterLi = document.querySelector(`.hide.${letter}`);
-		letterLi.className = `letter ${letter}`;
-		letterLi.style.color = `black`;
+		letterLi.className = `show letter ${letter}`;
 	}
 }
