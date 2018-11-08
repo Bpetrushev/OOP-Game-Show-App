@@ -2,8 +2,8 @@ class Phrase {
 	constructor(phrase){
 		this.phrase = phrase;
 	}
-	addPhraseToDisplay(){
-		const phraseUl = document.querySelector(`#phrase ul`);
+	addPhraseToDisplay(){																					//removes the previous phrase and
+		const phraseUl = document.querySelector(`#phrase ul`);												//creates each letter block for display
 		document.querySelectorAll(`.letter`).forEach(letter => phraseUl.removeChild(letter));
 		for (let i = 0; i < this.phrase.length; i++) {
 			const placeHolder = document.createElement(`li`);
@@ -12,10 +12,10 @@ class Phrase {
 			phraseUl.appendChild(placeHolder);
 		}
 	}
-	checkLetter(letter){
-		return !(this.phrase.indexOf(letter) == -1);
+	checkLetter(letter){																					//returns whether the received letter can be found 
+		return !(this.phrase.indexOf(letter) == -1);														//in the phrase
 	}
-	showMatchedLetter(letter){
+	showMatchedLetter(letter){																				//shows the received in the phrase display
 		const letterLi = document.querySelector(`.hide.${letter}`);
 		letterLi.className = `letter ${letter}`;
 		letterLi.style.color = `black`;
